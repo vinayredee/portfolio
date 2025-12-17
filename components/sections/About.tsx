@@ -43,21 +43,20 @@ export default function About({ id }: { id?: string }) {
 
                             {/* CTA Buttons - Horizontal Layout: Explore → Arrow → Resume */}
                             <div className="relative inline-flex flex-row items-center gap-6 flex-wrap">
-                                {/* Explore Button */}
+                                {/* Explore Button with Arrow attached */}
                                 <motion.a
                                     href="#projects"
                                     whileHover={{ scale: 1.02 }}
-                                    className="group inline-flex items-center gap-2 text-sm font-bold text-slate-900 uppercase tracking-wider"
+                                    className="group inline-flex items-center gap-1 text-sm font-bold text-slate-900 uppercase tracking-wider"
                                 >
                                     <span className="border-b-2 border-slate-900 pb-0.5 group-hover:border-indigo-600 group-hover:text-indigo-600 transition-colors">
                                         Explore My Work
                                     </span>
+                                    {/* L-Shaped Arrow directly attached */}
+                                    <svg width="50" height="40" viewBox="0 0 50 40" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-500 group-hover:text-indigo-600 transition-colors">
+                                        <path d="M2 2H42V36M42 36L36 30M42 36L48 30" />
+                                    </svg>
                                 </motion.a>
-
-                                {/* L-Shaped Arrow (Right then Down) - Positioned close to Explore */}
-                                <svg width="60" height="48" viewBox="0 0 60 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-500 -ml-4 self-start mt-1">
-                                    <path d="M2 2H52V44M52 44L46 38M52 44L58 38" />
-                                </svg>
 
                                 {/* Resume Button */}
                                 <motion.a
