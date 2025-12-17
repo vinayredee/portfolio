@@ -52,9 +52,9 @@ export default function About({ id }: { id?: string }) {
                                     <span className="border-b-2 border-slate-900 pb-0.5 group-hover:border-indigo-600 group-hover:text-indigo-600 transition-colors">
                                         Explore My Work
                                     </span>
-                                    {/* L-Shaped Arrow (Right then Down) */}
-                                    <svg width="32" height="40" viewBox="0 0 32 40" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-600 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform">
-                                        <path d="M1 1H24V38M24 38L18 32M24 38L30 32" />
+                                    {/* L-Shaped Arrow (Extended Right then Down) */}
+                                    <svg width="60" height="48" viewBox="0 0 60 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-600 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform">
+                                        <path d="M2 2H52V44M52 44L46 38M52 44L58 38" />
                                     </svg>
                                 </motion.a>
 
