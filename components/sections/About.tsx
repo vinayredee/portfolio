@@ -54,9 +54,9 @@ export default function About({ id }: { id?: string }) {
                                     </span>
                                 </motion.a>
 
-                                {/* Arrow Separator */}
-                                <svg width="40" height="16" viewBox="0 0 40 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-500">
-                                    <path d="M2 8H36M36 8L30 2M36 8L30 14" />
+                                {/* L-Shaped Arrow (Right then Down) */}
+                                <svg width="60" height="48" viewBox="0 0 60 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-500">
+                                    <path d="M2 2H52V44M52 44L46 38M52 44L58 38" />
                                 </svg>
 
                                 {/* Resume Button */}
