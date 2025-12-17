@@ -54,8 +54,8 @@ export default function About({ id }: { id?: string }) {
                                     </span>
                                 </motion.a>
 
-                                {/* L-Shaped Arrow (Right then Down) */}
-                                <svg width="60" height="48" viewBox="0 0 60 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-500">
+                                {/* L-Shaped Arrow (Right then Down) - Positioned close to Explore */}
+                                <svg width="60" height="48" viewBox="0 0 60 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-500 -ml-4 self-start mt-1">
                                     <path d="M2 2H52V44M52 44L46 38M52 44L58 38" />
                                 </svg>
 
