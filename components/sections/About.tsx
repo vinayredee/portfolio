@@ -31,12 +31,14 @@ export default function About({ id }: { id?: string }) {
                                 Engineering with <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">purpose</span>.
                             </h2>
 
-                            {/* Bio Text */}
-                            <div className="space-y-6 text-slate-600 text-base md:text-lg leading-relaxed font-medium text-balance mb-12">
-                                <p>{personalInfo.bio}</p>
-                                <p>
-                                    My approach combines deep technical understanding with a product-focused mindset, ensuring every line of code serves a purpose.
-                                </p>
+                            {/* Bio Text - Refactored into Card */}
+                            <div className="bg-white/60 backdrop-blur-md border border-indigo-100/50 rounded-2xl p-6 shadow-sm mb-10 hover:shadow-md transition-shadow duration-300">
+                                <div className="space-y-4 text-slate-600 text-sm leading-relaxed font-medium text-balance">
+                                    <p>{personalInfo.bio}</p>
+                                    <p>
+                                        My approach combines deep technical understanding with a product-focused mindset, ensuring every line of code serves a purpose.
+                                    </p>
+                                </div>
                             </div>
 
                             {/* CTA Buttons - Aligned with Axis */}
