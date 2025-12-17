@@ -52,7 +52,10 @@ export default function About({ id }: { id?: string }) {
                                     <span className="border-b-2 border-slate-900 pb-0.5 group-hover:border-indigo-600 group-hover:text-indigo-600 transition-colors">
                                         Explore My Work
                                     </span>
-                                    <ArrowDownRight size={18} className="text-indigo-600 group-hover:translate-y-1 group-hover:translate-x-1 transition-transform" />
+                                    {/* Custom Long Slim Arrow */}
+                                    <svg width="12" height="24" viewBox="0 0 12 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-600 group-hover:translate-y-1 transition-transform">
+                                        <path d="M6 1L6 23M6 23L1 18M6 23L11 18" />
+                                    </svg>
                                 </motion.a>
 
                                 {/* Resume Button */}

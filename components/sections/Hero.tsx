@@ -1,9 +1,10 @@
+```javascript
 'use client';
 
 import { motion } from 'framer-motion';
 import { personalInfo } from '@/lib/data';
 import { useEffect, useState } from 'react';
-import { ArrowRight, FileText } from 'lucide-react';
+import { ArrowDown, FileText } from 'lucide-react';
 
 // Capsules - Adjusted Positions & Colors
 const roles = [
@@ -95,7 +96,7 @@ export default function Hero({ id }: { id?: string }) {
                         className="flex items-center gap-3 text-sm font-bold text-slate-900 tracking-wider uppercase md:col-span-2 ml-2 cursor-default"
                     >
                         <span className="border-b border-slate-300 pb-1">Start Exploring</span>
-                        <ArrowRight size={16} />
+                        <ArrowDown size={18} />
                     </motion.div>
                 </div>
 
@@ -132,7 +133,7 @@ export default function Hero({ id }: { id?: string }) {
                             className="relative w-36 h-36 md:w-44 md:h-44 z-10 p-1 bg-white rounded-full shadow-xl"
                         >
                             <img
-                                src={timestamp ? `/me.png?v=${timestamp}` : '/me.png'}
+                                src={timestamp ? `/ me.png ? v = ${ timestamp } ` : '/me.png'}
                                 alt="Vinay"
                                 className="w-full h-full object-cover rounded-full"
                                 onError={(e) => {
@@ -153,7 +154,7 @@ export default function Hero({ id }: { id?: string }) {
                                 scale: { delay: role.delay * 0.2, duration: 0.5 },
                                 y: { repeat: Infinity, duration: 2.5, ease: "easeInOut", delay: role.delay }
                             }}
-                            className={`absolute px-3 py-1.5 rounded-full shadow-sm border backdrop-blur-sm text-[10px] md:text-zs font-bold whitespace-nowrap z-20 ${role.color}`}
+                            className={`absolute px - 3 py - 1.5 rounded - full shadow - sm border backdrop - blur - sm text - [10px] md: text - zs font - bold whitespace - nowrap z - 20 ${ role.color } `}
                             style={{
                                 top: role.top,
                                 left: role.left,
