@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { useEffect } from 'react';
 
 const Hero = dynamic(() => import('@/components/sections/Hero'), { ssr: true });
 const About = dynamic(() => import('@/components/sections/About'), { ssr: true });
@@ -11,6 +12,14 @@ const Contact = dynamic(() => import('@/components/sections/Contact'), { ssr: tr
 const Outro = dynamic(() => import('@/components/sections/Outro'), { ssr: true });
 
 export default function Home() {
+  // Scroll to top on page load/refresh
+  useEffect(() => {
+    // Clear hash from URL and scroll to top
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen relative">
       {/* Reduced Global Gradient Opacity/Visibility to fix "senseless gradients" complaint */}
