@@ -6,134 +6,100 @@ import { motion } from 'framer-motion';
 
 export default function About({ id }: { id?: string }) {
     return (
-        <section id={id} className="py-20 px-6 overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+        <section id={id} className="py-24 px-6 relative overflow-hidden bg-slate-50/30">
+            {/* Subtle Grid Background */}
+            <div className="absolute inset-0 bg-grid-slate-200/[0.04] [mask-image:linear-gradient(0deg,white,transparent)] pointer-events-none"></div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className="max-w-7xl mx-auto relative z-10">
 
-                    {/* Bio Column */}
-                    <div>
-                        <span className="text-accent font-bold tracking-widest uppercase text-xs flex items-center gap-2">
-                            <Sparkles size={14} className="text-amber-400" />
-                            About Me
-                        </span>
-                        <h2 className="text-3xl font-bold text-gray-900 mt-3 mb-6">
-                            Engineering with purpose.
-                        </h2>
-                        <div className="prose text-gray-500 leading-relaxed text-balance mb-8">
-                            <p>{personalInfo.bio}</p>
-                            <p className="mt-4">
-                                My approach combines deep technical understanding with a product-focused mindset, ensuring every line of code serves a purpose.
-                            </p>
-                        </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
-                        {/* CTA Buttons */}
-                        <div className="relative inline-flex flex-col items-start gap-6">
+                    {/* Left Column: Bio & Identity - Engineered Look */}
+                    <div className="relative">
+                        {/* Decorative Axis Line */}
+                        <div className="absolute left-0 top-2 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 via-indigo-200 to-transparent"></div>
 
-                            {/* Explore Button */}
-                            <motion.a
-                                href="#projects"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white text-sm font-semibold rounded-full shadow-md hover:shadow-lg transition-all"
-                            >
-                                Explore My Work
-                                <MoveRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                            </motion.a>
+                        <div className="pl-8 md:pl-10">
+                            {/* Label */}
+                            <span className="inline-flex items-center gap-2 text-indigo-600 font-bold tracking-[0.2em] uppercase text-xs mb-6">
+                                <Sparkles size={14} className="text-indigo-500" />
+                                About Me
+                            </span>
 
-                            {/* Resume Button */}
-                            <motion.a
-                                href="https://drive.google.com/file/d/YOUR_RESUME_LINK_HERE/view?usp=sharing" // Placeholder
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 border border-gray-200 text-sm font-semibold rounded-full shadow-sm hover:shadow-md hover:text-gray-900 hover:border-gray-300 transition-all"
-                            >
-                                View Resume
-                                <FileText size={16} />
-                            </motion.a>
+                            {/* Headline */}
+                            <h2 className="text-3xl md:text-4xl font-black text-slate-900 leading-tight tracking-tight mb-8">
+                                Engineering with <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">purpose</span>.
+                            </h2>
 
-                            {/* Premium 3D Gradient Arrow */}
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.8, delay: 0.2 }}
-                                className="absolute top-2 left-full ml-8 hidden xl:block"
-                            >
-                                <svg width="120" height="60" viewBox="0 0 120 60" fill="none">
-                                    <defs>
-                                        <linearGradient id="arrow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                            <stop offset="0%" stopColor="#cbd5e1" /> {/* Silver/Slate-300 */}
-                                            <stop offset="50%" stopColor="#94a3b8" /> {/* Slate-400 */}
-                                            <stop offset="100%" stopColor="#cbd5e1" /> {/* Silver/Slate-300 */}
-                                        </linearGradient>
-                                        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                                            <feGaussianBlur stdDeviation="2" result="coloredBlur" />
-                                            <feMerge>
-                                                <feMergeNode in="coloredBlur" />
-                                                <feMergeNode in="SourceGraphic" />
-                                            </feMerge>
-                                        </filter>
-                                    </defs>
-                                    <path
-                                        d="M10 30 C 40 10, 80 10, 100 30"
-                                        stroke="url(#arrow-gradient)"
-                                        strokeWidth="3"
-                                        strokeLinecap="round"
-                                        className="drop-shadow-sm opacity-80"
-                                    />
-                                    <path
-                                        d="M90 20 L 100 30 L 85 40"
-                                        stroke="url(#arrow-gradient)"
-                                        strokeWidth="3"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                </svg>
-                                <motion.span
-                                    animate={{ y: [0, -5, 0] }}
-                                    transition={{ repeat: Infinity, duration: 2 }}
-                                    className="absolute -top-4 left-10 text-xs font-bold text-gray-400 tracking-wide uppercase"
+                            {/* Bio Text */}
+                            <div className="space-y-6 text-slate-600 text-base md:text-lg leading-relaxed font-medium text-balance mb-12">
+                                <p>{personalInfo.bio}</p>
+                                <p>
+                                    My approach combines deep technical understanding with a product-focused mindset, ensuring every line of code serves a purpose.
+                                </p>
+                            </div>
+
+                            {/* CTA Buttons - Aligned with Axis */}
+                            <div className="relative inline-flex flex-col items-start gap-5">
+                                {/* Explore Button */}
+                                <motion.a
+                                    href="#projects"
+                                    whileHover={{ x: 5 }}
+                                    className="group inline-flex items-center gap-3 text-sm font-bold text-slate-900 uppercase tracking-wider"
                                 >
-                                    My Work
-                                </motion.span>
-                            </motion.div>
+                                    <span className="border-b-2 border-slate-900 pb-0.5 group-hover:border-indigo-600 group-hover:text-indigo-600 transition-colors">
+                                        Explore My Work
+                                    </span>
+                                    <MoveRight size={18} className="text-indigo-600 group-hover:translate-x-1 transition-transform" />
+                                </motion.a>
+
+                                {/* Resume Button */}
+                                <motion.a
+                                    href="https://drive.google.com/file/d/YOUR_RESUME_LINK_HERE/view?usp=sharing" // Placeholder
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    whileHover={{ x: 5 }}
+                                    className="group inline-flex items-center gap-3 text-sm font-bold text-slate-500 uppercase tracking-wider hover:text-slate-800 transition-colors"
+                                >
+                                    <span className="border-b border-transparent group-hover:border-slate-400 pb-0.5 transition-colors">
+                                        View Resume
+                                    </span>
+                                    <FileText size={16} className="text-slate-400 group-hover:text-slate-600 transition-colors" />
+                                </motion.a>
+                            </div>
                         </div>
                     </div>
 
 
+                    {/* Right Column: Education & Achievements */}
+                    <div className="space-y-10 relative">
+                        {/* Blob Background */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-indigo-50/50 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
-                    {/* Education & Achievements Column - Premium Redesign */}
-                    <div className="space-y-8">
-
-                        {/* Education Card - Premium Glass/Gradient */}
+                        {/* Education Card - Premium Glass */}
                         <motion.div
                             whileHover={{ y: -5 }}
-                            className="relative p-6 bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-white/20 ring-1 ring-gray-100 overflow-hidden group"
+                            className="relative p-8 bg-white/80 backdrop-blur-xl rounded-[2rem] shadow-2xl shadow-indigo-100/40 border border-white/60 overflow-hidden group"
                         >
-                            {/* Decorative Blur */}
-                            <div className="absolute -right-10 -top-10 w-32 h-32 bg-emerald-50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            {/* Accent Gradient */}
+                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-violet-500 to-indigo-500 opacity-80"></div>
 
-                            {/* Left Accent Line */}
-                            <div className="absolute left-0 top-6 bottom-6 w-1 bg-gradient-to-b from-emerald-400 to-teal-500 rounded-r-full"></div>
-
-                            <div className="flex gap-5 items-start pl-4"> {/* Added pl-4 for accent line */}
-                                <div className="p-3.5 bg-gradient-to-br from-emerald-50 to-teal-50 text-emerald-600 rounded-xl shadow-inner ring-1 ring-emerald-100 group-hover:scale-110 transition-transform duration-300">
-                                    <GraduationCap size={28} />
+                            <div className="flex gap-6 items-start">
+                                <div className="p-4 bg-indigo-50 text-indigo-600 rounded-2xl group-hover:scale-110 transition-transform duration-500 shadow-sm">
+                                    <GraduationCap size={32} strokeWidth={1.5} />
                                 </div>
-                                <div className="flex-1">
-                                    <h3 className="font-bold text-lg text-gray-900 group-hover:text-emerald-700 transition-colors">
-                                        Education
+                                <div className="flex-1 space-y-2">
+                                    <span className="text-xs font-bold text-indigo-400 uppercase tracking-wider">Education</span>
+                                    <h3 className="font-bold text-xl text-slate-900 leading-tight">
+                                        {personalInfo.education.degree}
                                     </h3>
-                                    <p className="font-semibold text-gray-800 text-base mt-2">{personalInfo.education.degree}</p>
-                                    <p className="text-sm text-gray-500 font-medium">{personalInfo.education.institution}</p>
+                                    <p className="text-slate-500 font-medium">{personalInfo.education.institution}</p>
 
-                                    <div className="flex flex-wrap gap-2 mt-4">
-                                        <span className="inline-flex items-center px-3 py-1 bg-emerald-100/50 border border-emerald-100 text-emerald-700 text-xs font-bold rounded-full">
+                                    <div className="flex flex-wrap gap-3 pt-2">
+                                        <span className="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full">
                                             CGPA: {personalInfo.education.cgpa}
                                         </span>
-                                        <span className="inline-flex items-center px-3 py-1 bg-gray-50 text-gray-600 text-xs font-bold rounded-full border border-gray-200">
+                                        <span className="inline-flex items-center px-3 py-1 bg-white border border-slate-200 text-slate-400 text-xs font-bold rounded-full">
                                             2021 - 2025
                                         </span>
                                     </div>
@@ -141,29 +107,27 @@ export default function About({ id }: { id?: string }) {
                             </div>
                         </motion.div>
 
-                        {/* Achievements - Premium Widget Stack */}
-                        <div className="space-y-4">
-                            <div className="flex items-center gap-3">
-                                <div className="p-2 bg-gradient-to-br from-amber-50 to-orange-50 text-amber-600 rounded-lg ring-1 ring-amber-100 shadow-sm">
-                                    <Trophy size={20} />
-                                </div>
-                                <h3 className="font-bold text-gray-900 text-lg tracking-tight">Achievements</h3>
+                        {/* Achievements - Clean Stack */}
+                        <div className="space-y-6 pl-2">
+                            <div className="flex items-center gap-3 mb-2">
+                                <Trophy size={18} className="text-amber-500" />
+                                <h3 className="font-bold text-slate-900 text-sm uppercase tracking-wider">Key Achievements</h3>
                             </div>
 
-                            <div className="grid gap-3">
+                            <div className="grid gap-4">
                                 {personalInfo.certifications.map((cert, i) => (
                                     <motion.div
                                         key={i}
                                         initial={{ opacity: 0, x: 20 }}
                                         whileInView={{ opacity: 1, x: 0 }}
                                         transition={{ delay: i * 0.1 }}
-                                        whileHover={{ x: 5, backgroundColor: "rgba(255, 255, 255, 1)" }}
-                                        className="flex items-center gap-4 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200/60 shadow-sm hover:shadow-md hover:border-amber-200/50 transition-all cursor-default group"
+                                        whileHover={{ x: 5 }}
+                                        className="flex items-start gap-4 p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all group"
                                     >
-                                        <div className="p-2 bg-gray-50 text-gray-400 rounded-full group-hover:bg-amber-50 group-hover:text-amber-500 transition-colors">
-                                            <Award size={18} />
+                                        <div className="mt-0.5 p-1.5 bg-amber-50 text-amber-500 rounded-full group-hover:bg-indigo-50 group-hover:text-indigo-500 transition-colors">
+                                            <Award size={16} />
                                         </div>
-                                        <span className="font-semibold text-gray-700 text-sm group-hover:text-gray-900 transition-colors">
+                                        <span className="font-semibold text-slate-600 text-sm leading-relaxed group-hover:text-slate-900 transition-colors">
                                             {cert}
                                         </span>
                                     </motion.div>
