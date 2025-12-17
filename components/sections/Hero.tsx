@@ -34,44 +34,57 @@ export default function Hero({ id }: { id?: string }) {
 
                 {/* LEFT: Text Content */}
                 {/* LEFT: Text Content - Refactored to Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 items-start z-10 font-sans">
+                {/* LEFT: Text Content - Refactored to Grid of Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start z-10 font-sans">
 
                     {/* Cell 1: Greeting Badge */}
                     <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="bg-slate-100 border border-slate-200 text-slate-600 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase md:col-span-1 justify-self-start"
+                        className="md:col-span-1 justify-self-start"
                     >
-                        {greeting}, Welcome
+                        <span className="bg-white/80 backdrop-blur-sm border border-white/60 text-slate-600 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase shadow-sm">
+                            {greeting}, Welcome
+                        </span>
                     </motion.div>
 
-                    {/* Cell 2: Welcome Text - Placed nicely in the grid next to badge */}
-                    <motion.p
+                    {/* Cell 2: Welcome Card - Glass Effect */}
+                    <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-slate-500 text-sm md:text-base leading-relaxed max-w-sm font-medium md:col-span-1"
+                        className="bg-white/40 backdrop-blur-md border border-white/30 p-5 rounded-2xl shadow-sm md:col-span-1"
                     >
-                        Thanks for spending time to visit my portfolio. <br className="hidden md:block" />
-                        This is where my <span className="text-slate-900 font-bold">learning, logic, and passion</span> for building meaningful software come together.
-                    </motion.p>
-
-                    {/* Cell 3: Identity Block - Spans full width to maintain authority */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.2 }}
-                        className="border-l-2 border-indigo-500 pl-6 md:col-span-2"
-                    >
-                        <span className="block text-slate-400 text-xs tracking-[0.3em] font-bold uppercase mb-3">
-                            I am
-                        </span>
-                        <h1 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-3">
-                            {personalInfo.name}
-                        </h1>
-                        <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-sm">
-                            Architecting seamless digital experiences with <span className="text-indigo-600 font-bold">AI-driven precision</span> and scalable design.
+                        <p className="text-slate-600 text-sm leading-relaxed font-medium">
+                            Thanks for spending time to visit my portfolio. <br className="hidden md:block" />
+                            This is where my <span className="text-slate-900 font-bold">learning, logic, and passion</span> for building meaningful software come together.
                         </p>
+                    </motion.div>
+
+                    {/* Cell 3: Identity Card - Premium Glass Block */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.2 }}
+                        className="bg-white/70 backdrop-blur-xl border border-white/50 p-8 rounded-[2rem] shadow-xl shadow-indigo-100/30 md:col-span-2 relative overflow-hidden group hover:shadow-2xl hover:shadow-indigo-100/50 transition-all duration-500"
+                    >
+                        {/* Decorative Gradient Blob */}
+                        <div className="absolute -right-20 -top-20 w-64 h-64 bg-indigo-50/50 rounded-full blur-3xl group-hover:bg-indigo-100/50 transition-colors duration-500"></div>
+
+                        {/* Vertical Accent Line */}
+                        <div className="absolute left-0 top-8 bottom-8 w-1 bg-gradient-to-b from-indigo-500 to-violet-500 rounded-r-full"></div>
+
+                        <div className="relative z-10 pl-6">
+                            <span className="block text-indigo-600 text-xs tracking-[0.3em] font-bold uppercase mb-2">
+                                I am
+                            </span>
+                            <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-4">
+                                {personalInfo.name}
+                            </h1>
+                            <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-lg font-medium">
+                                Architecting seamless digital experiences with <span className="text-indigo-600 font-bold">AI-driven precision</span> and scalable design.
+                            </p>
+                        </div>
                     </motion.div>
 
                     {/* Cell 4: Start Exploring - Spans full width */}
@@ -81,7 +94,7 @@ export default function Hero({ id }: { id?: string }) {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                         onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}
-                        className="group flex items-center gap-3 text-sm font-bold text-slate-900 cursor-pointer tracking-wider uppercase hover:text-indigo-600 transition-colors md:col-span-2"
+                        className="group flex items-center gap-3 text-sm font-bold text-slate-900 cursor-pointer tracking-wider uppercase hover:text-indigo-600 transition-colors md:col-span-2 ml-2"
                     >
                         <span className="border-b border-slate-300 group-hover:border-indigo-600 pb-1 transition-colors">Start Exploring</span>
                         <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
