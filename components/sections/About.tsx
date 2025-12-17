@@ -41,33 +41,19 @@ export default function About({ id }: { id?: string }) {
                                 </div>
                             </div>
 
-                            {/* CTA Buttons - Two rectangular buttons with spacing */}
-                            <div className="relative inline-flex flex-row items-center gap-8 flex-wrap">
-                                {/* Explore Button - Rectangular Box */}
-                                <motion.a
-                                    href="#projects"
-                                    whileHover={{ scale: 1.02 }}
-                                    className="group inline-flex items-center text-sm font-bold text-slate-900 uppercase tracking-wider"
-                                >
-                                    <span className="border-2 border-slate-900 px-5 py-2.5 rounded-md group-hover:border-indigo-600 group-hover:text-indigo-600 transition-colors">
-                                        Explore My Work
-                                    </span>
-                                </motion.a>
-
-                                {/* Resume Button - Rectangular Box */}
-                                <motion.a
-                                    href="https://drive.google.com/file/d/YOUR_RESUME_LINK_HERE/view?usp=sharing"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    whileHover={{ scale: 1.02 }}
-                                    className="group inline-flex items-center gap-2 text-sm font-bold text-slate-600 uppercase tracking-wider"
-                                >
-                                    <span className="border-2 border-slate-400 px-5 py-2.5 rounded-md group-hover:border-slate-700 group-hover:text-slate-900 transition-colors flex items-center gap-2">
-                                        <FileText size={16} />
-                                        View Resume
-                                    </span>
-                                </motion.a>
-                            </div>
+                            {/* View Resume Button - Simple underline style */}
+                            <motion.a
+                                href="https://drive.google.com/file/d/YOUR_RESUME_LINK_HERE/view?usp=sharing"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ x: 5 }}
+                                className="group inline-flex items-center gap-3 text-sm font-bold text-slate-500 uppercase tracking-wider hover:text-slate-800 transition-colors"
+                            >
+                                <span className="border-b border-transparent group-hover:border-slate-400 pb-0.5 transition-colors">
+                                    View Resume
+                                </span>
+                                <FileText size={16} className="text-slate-400 group-hover:text-slate-600 transition-colors" />
+                            </motion.a>
                         </div>
                     </div>
 
