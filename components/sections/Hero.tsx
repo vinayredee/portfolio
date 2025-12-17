@@ -33,34 +33,35 @@ export default function Hero({ id }: { id?: string }) {
             <div className="max-w-6xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
                 {/* LEFT: Text Content */}
-                <div className="flex flex-col items-start z-10 font-sans">
+                {/* LEFT: Text Content - Refactored to Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 items-start z-10 font-sans">
 
-                    {/* Greeting Badge - Structural Element 1 */}
+                    {/* Cell 1: Greeting Badge */}
                     <motion.div
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="bg-slate-100 border border-slate-200 text-slate-600 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-8"
+                        className="bg-slate-100 border border-slate-200 text-slate-600 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase md:col-span-1 justify-self-start"
                     >
                         {greeting}, Welcome
                     </motion.div>
 
-                    {/* Welcome Text */}
+                    {/* Cell 2: Welcome Text - Placed nicely in the grid next to badge */}
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-slate-500 text-base leading-relaxed mb-8 max-w-md font-medium"
+                        className="text-slate-500 text-sm md:text-base leading-relaxed max-w-sm font-medium md:col-span-1"
                     >
                         Thanks for spending time to visit my portfolio. <br className="hidden md:block" />
                         This is where my <span className="text-slate-900 font-bold">learning, logic, and passion</span> for building meaningful software come together.
                     </motion.p>
 
-                    {/* Identity Block - Structural Element 2 (The Axis) */}
+                    {/* Cell 3: Identity Block - Spans full width to maintain authority */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="border-l-2 border-indigo-500 pl-6 mb-8"
+                        className="border-l-2 border-indigo-500 pl-6 md:col-span-2"
                     >
                         <span className="block text-slate-400 text-xs tracking-[0.3em] font-bold uppercase mb-3">
                             I am
@@ -73,14 +74,14 @@ export default function Hero({ id }: { id?: string }) {
                         </p>
                     </motion.div>
 
-                    {/* Start Exploring - Structural Element 3 */}
+                    {/* Cell 4: Start Exploring - Spans full width */}
                     <motion.a
                         href="#about"
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                         onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}
-                        className="group flex items-center gap-3 text-sm font-bold text-slate-900 cursor-pointer tracking-wider uppercase hover:text-indigo-600 transition-colors"
+                        className="group flex items-center gap-3 text-sm font-bold text-slate-900 cursor-pointer tracking-wider uppercase hover:text-indigo-600 transition-colors md:col-span-2"
                     >
                         <span className="border-b border-slate-300 group-hover:border-indigo-600 pb-1 transition-colors">Start Exploring</span>
                         <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
