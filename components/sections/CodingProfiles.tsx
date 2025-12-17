@@ -70,9 +70,6 @@ export default function Profiles({ id }: { id?: string }) {
                     <span className="text-xs font-bold tracking-[0.2em] text-indigo-600 uppercase mb-3 block">
                         Connect & Code
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                        Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-600">Footprint</span>.
-                    </h2>
                     <p className="text-gray-500 mt-4 max-w-2xl mx-auto text-sm md:text-base">
                         My code lives on <span className="text-gray-900 font-semibold">GitHub</span>, my challenges are solved on <span className="text-yellow-600 font-semibold">LeetCode</span>, my DSA skills are sharpened on <span className="text-rose-600 font-semibold">takeuforward</span>, and my professional journey unfolds on <span className="text-blue-600 font-semibold">LinkedIn</span>.
                     </p>
