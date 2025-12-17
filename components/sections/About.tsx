@@ -47,9 +47,9 @@ export default function About({ id }: { id?: string }) {
                                 <motion.a
                                     href="#projects"
                                     whileHover={{ scale: 1.02 }}
-                                    className="group inline-flex items-center gap-1 text-sm font-bold text-slate-900 uppercase tracking-wider"
+                                    className="group inline-flex items-center gap-2 text-sm font-bold text-slate-900 uppercase tracking-wider"
                                 >
-                                    <span className="border-b-2 border-slate-900 pb-0.5 group-hover:border-indigo-600 group-hover:text-indigo-600 transition-colors">
+                                    <span className="border-2 border-slate-900 px-4 py-2 rounded-md group-hover:border-indigo-600 group-hover:text-indigo-600 transition-colors">
                                         Explore My Work
                                     </span>
                                     {/* L-Shaped Arrow directly attached */}
