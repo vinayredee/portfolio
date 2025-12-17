@@ -41,30 +41,31 @@ export default function About({ id }: { id?: string }) {
                                 </div>
                             </div>
 
-                            {/* CTA Buttons - Aligned with Axis */}
-                            <div className="relative inline-flex flex-col items-start gap-12">
+                            {/* CTA Buttons - Horizontal Layout: Explore → Arrow → Resume */}
+                            <div className="relative inline-flex flex-row items-center gap-6 flex-wrap">
                                 {/* Explore Button */}
                                 <motion.a
                                     href="#projects"
-                                    whileHover={{ x: 5 }}
-                                    className="group inline-flex items-center gap-3 text-sm font-bold text-slate-900 uppercase tracking-wider"
+                                    whileHover={{ scale: 1.02 }}
+                                    className="group inline-flex items-center gap-2 text-sm font-bold text-slate-900 uppercase tracking-wider"
                                 >
                                     <span className="border-b-2 border-slate-900 pb-0.5 group-hover:border-indigo-600 group-hover:text-indigo-600 transition-colors">
                                         Explore My Work
                                     </span>
-                                    {/* L-Shaped Arrow (Extended Right then Down) */}
-                                    <svg width="60" height="48" viewBox="0 0 60 48" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-600 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform">
-                                        <path d="M2 2H52V44M52 44L46 38M52 44L58 38" />
-                                    </svg>
                                 </motion.a>
+
+                                {/* Arrow Separator */}
+                                <svg width="40" height="16" viewBox="0 0 40 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-500">
+                                    <path d="M2 8H36M36 8L30 2M36 8L30 14" />
+                                </svg>
 
                                 {/* Resume Button */}
                                 <motion.a
-                                    href="https://drive.google.com/file/d/YOUR_RESUME_LINK_HERE/view?usp=sharing" // Placeholder
+                                    href="https://drive.google.com/file/d/YOUR_RESUME_LINK_HERE/view?usp=sharing"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    whileHover={{ x: 5 }}
-                                    className="group inline-flex items-center gap-3 text-sm font-bold text-slate-500 uppercase tracking-wider hover:text-slate-800 transition-colors"
+                                    whileHover={{ scale: 1.02 }}
+                                    className="group inline-flex items-center gap-2 text-sm font-bold text-slate-500 uppercase tracking-wider hover:text-slate-800 transition-colors"
                                 >
                                     <span className="border-b border-transparent group-hover:border-slate-400 pb-0.5 transition-colors">
                                         View Resume
