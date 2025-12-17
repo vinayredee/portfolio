@@ -1,14 +1,12 @@
 'use client';
 
-import { motion, HTMLMotionProps } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { ReactNode } from 'react';
+import { ComponentProps } from 'react';
 
-interface GlassCardProps extends HTMLMotionProps<"div"> {
-    children: ReactNode;
-    className?: string;
+type GlassCardProps = ComponentProps<typeof motion.div> & {
     hoverEffect?: boolean;
-}
+};
 
 export default function GlassCard({
     children,
