@@ -75,13 +75,13 @@ export default function Hero({ id }: { id?: string }) {
                         <div className="absolute left-0 top-8 bottom-8 w-1 bg-gradient-to-b from-indigo-500 to-violet-500 rounded-r-full"></div>
 
                         <div className="relative z-10 pl-6">
-                            <span className="block text-indigo-600 text-xs tracking-[0.3em] font-bold uppercase mb-2">
+                            <span className="block text-indigo-600 text-xs tracking-[0.3em] font-bold uppercase mb-1">
                                 I am
                             </span>
-                            <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight mb-4">
+                            <h1 className="text-xl md:text-2xl font-black text-orange-400 tracking-tight mb-2">
                                 {personalInfo.name}
                             </h1>
-                            <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-lg font-medium">
+                            <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-lg font-medium">
                                 Architecting seamless digital experiences with <span className="text-indigo-600 font-bold">AI-driven precision</span> and scalable design.
                             </p>
                         </div>

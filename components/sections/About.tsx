@@ -74,34 +74,34 @@ export default function About({ id }: { id?: string }) {
 
 
                     {/* Right Column: Education & Achievements */}
-                    <div className="space-y-10 relative">
+                    <div className="space-y-8 relative">
                         {/* Blob Background */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-indigo-50/50 rounded-full blur-3xl -z-10 pointer-events-none"></div>
 
-                        {/* Education Card - Premium Glass */}
+                        {/* Education Card - Premium Glass (Compact) */}
                         <motion.div
                             whileHover={{ y: -5 }}
-                            className="relative p-8 bg-white/80 backdrop-blur-xl rounded-[2rem] shadow-2xl shadow-indigo-100/40 border border-white/60 overflow-hidden group"
+                            className="relative p-6 bg-white/80 backdrop-blur-xl rounded-[1.5rem] shadow-xl shadow-indigo-100/40 border border-white/60 overflow-hidden group"
                         >
                             {/* Accent Gradient */}
                             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-violet-500 to-indigo-500 opacity-80"></div>
 
-                            <div className="flex gap-6 items-start">
-                                <div className="p-4 bg-indigo-50 text-indigo-600 rounded-2xl group-hover:scale-110 transition-transform duration-500 shadow-sm">
-                                    <GraduationCap size={32} strokeWidth={1.5} />
+                            <div className="flex gap-4 items-start">
+                                <div className="p-3 bg-indigo-50 text-indigo-600 rounded-xl group-hover:scale-110 transition-transform duration-500 shadow-sm">
+                                    <GraduationCap size={24} strokeWidth={1.5} />
                                 </div>
-                                <div className="flex-1 space-y-2">
-                                    <span className="text-xs font-bold text-indigo-400 uppercase tracking-wider">Education</span>
-                                    <h3 className="font-bold text-xl text-slate-900 leading-tight">
+                                <div className="flex-1 space-y-1.5">
+                                    <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-wider">Education</span>
+                                    <h3 className="font-bold text-lg text-slate-900 leading-tight">
                                         {personalInfo.education.degree}
                                     </h3>
-                                    <p className="text-slate-500 font-medium">{personalInfo.education.institution}</p>
+                                    <p className="text-slate-500 text-sm font-medium">{personalInfo.education.institution}</p>
 
-                                    <div className="flex flex-wrap gap-3 pt-2">
-                                        <span className="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded-full">
+                                    <div className="flex flex-wrap gap-2 pt-2">
+                                        <span className="inline-flex items-center px-2.5 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-bold rounded-full">
                                             CGPA: {personalInfo.education.cgpa}
                                         </span>
-                                        <span className="inline-flex items-center px-3 py-1 bg-white border border-slate-200 text-slate-400 text-xs font-bold rounded-full">
+                                        <span className="inline-flex items-center px-2.5 py-0.5 bg-white border border-slate-200 text-slate-400 text-[10px] font-bold rounded-full">
                                             2021 - 2025
                                         </span>
                                     </div>
@@ -109,14 +109,14 @@ export default function About({ id }: { id?: string }) {
                             </div>
                         </motion.div>
 
-                        {/* Achievements - Clean Stack */}
-                        <div className="space-y-6 pl-2">
-                            <div className="flex items-center gap-3 mb-2">
-                                <Trophy size={18} className="text-amber-500" />
-                                <h3 className="font-bold text-slate-900 text-sm uppercase tracking-wider">Key Achievements</h3>
+                        {/* Achievements - Clean Stack (Compact) */}
+                        <div className="space-y-4 pl-1">
+                            <div className="flex items-center gap-2 mb-2">
+                                <Trophy size={16} className="text-amber-500" />
+                                <h3 className="font-bold text-slate-900 text-xs uppercase tracking-wider">Key Achievements</h3>
                             </div>
 
-                            <div className="grid gap-4">
+                            <div className="grid gap-3">
                                 {personalInfo.certifications.map((cert, i) => (
                                     <motion.div
                                         key={i}
@@ -124,12 +124,12 @@ export default function About({ id }: { id?: string }) {
                                         whileInView={{ opacity: 1, x: 0 }}
                                         transition={{ delay: i * 0.1 }}
                                         whileHover={{ x: 5 }}
-                                        className="flex items-start gap-4 p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all group"
+                                        className="flex items-start gap-3 p-3 bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all group"
                                     >
-                                        <div className="mt-0.5 p-1.5 bg-amber-50 text-amber-500 rounded-full group-hover:bg-indigo-50 group-hover:text-indigo-500 transition-colors">
-                                            <Award size={16} />
+                                        <div className="mt-0.5 p-1 bg-amber-50 text-amber-500 rounded-full group-hover:bg-indigo-50 group-hover:text-indigo-500 transition-colors">
+                                            <Award size={14} />
                                         </div>
-                                        <span className="font-semibold text-slate-600 text-sm leading-relaxed group-hover:text-slate-900 transition-colors">
+                                        <span className="font-semibold text-slate-600 text-xs leading-relaxed group-hover:text-slate-900 transition-colors">
                                             {cert}
                                         </span>
                                     </motion.div>
