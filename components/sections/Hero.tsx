@@ -87,18 +87,16 @@ export default function Hero({ id }: { id?: string }) {
                         </div>
                     </motion.div>
 
-                    {/* Cell 4: Start Exploring - Spans full width */}
-                    <motion.a
-                        href="#about"
+                    {/* Cell 4: Start Exploring - Static Text */}
+                    <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}
-                        className="group flex items-center gap-3 text-sm font-bold text-slate-900 cursor-pointer tracking-wider uppercase hover:text-indigo-600 transition-colors md:col-span-2 ml-2"
+                        className="flex items-center gap-3 text-sm font-bold text-slate-900 tracking-wider uppercase md:col-span-2 ml-2 cursor-default"
                     >
-                        <span className="border-b border-slate-300 group-hover:border-indigo-600 pb-1 transition-colors">Start Exploring</span>
-                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                    </motion.a>
+                        <span className="border-b border-slate-300 pb-1">Start Exploring</span>
+                        <ArrowRight size={16} />
+                    </motion.div>
                 </div>
 
                 {/* RIGHT: Photo + Capsules */}

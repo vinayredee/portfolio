@@ -1,7 +1,7 @@
 'use client';
 
 import { personalInfo } from '@/lib/data';
-import { Trophy, GraduationCap, Award, MoveRight, Sparkles, FileText } from 'lucide-react';
+import { Trophy, GraduationCap, Award, MoveRight, Sparkles, FileText, ArrowDownRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function About({ id }: { id?: string }) {
@@ -42,7 +42,7 @@ export default function About({ id }: { id?: string }) {
                             </div>
 
                             {/* CTA Buttons - Aligned with Axis */}
-                            <div className="relative inline-flex flex-col items-start gap-5">
+                            <div className="relative inline-flex flex-col items-start gap-12">
                                 {/* Explore Button */}
                                 <motion.a
                                     href="#projects"
@@ -52,7 +52,7 @@ export default function About({ id }: { id?: string }) {
                                     <span className="border-b-2 border-slate-900 pb-0.5 group-hover:border-indigo-600 group-hover:text-indigo-600 transition-colors">
                                         Explore My Work
                                     </span>
-                                    <MoveRight size={18} className="text-indigo-600 group-hover:translate-x-1 transition-transform" />
+                                    <ArrowDownRight size={18} className="text-indigo-600 group-hover:translate-y-1 group-hover:translate-x-1 transition-transform" />
                                 </motion.a>
 
                                 {/* Resume Button */}
