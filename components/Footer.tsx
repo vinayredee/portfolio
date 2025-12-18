@@ -16,7 +16,7 @@ export default function Footer() {
 
                 <div className="flex flex-col items-center md:items-end gap-1">
                     <p className="text-xs text-gray-500 font-medium">
-                        Designed & Developed with <span className="text-red-500">♥</span> and <span className="text-indigo-600 font-bold">Code</span>
+                        Designed & Developed with <span className="text-indigo-600 font-bold">Precision</span> and <span className="text-indigo-600 font-bold">Code</span>
                     </p>
                     <div className="inline-flex items-center gap-2 px-2 py-1 rounded-full bg-white border border-gray-200 shadow-sm text-[10px] font-bold uppercase tracking-wider text-gray-600">
                         Portfolio v2.0
