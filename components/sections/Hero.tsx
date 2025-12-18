@@ -108,7 +108,7 @@ export default function Hero({ id }: { id?: string }) {
                         {/* Rotating Text Ring - Thinner & Smaller & Slower */}
                         <motion.div
                             animate={{ rotate: 360 }}
-                            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                             className="absolute inset-0 z-0 w-full h-full"
                         >
                             <svg viewBox="0 0 200 200" className="w-full h-full">
@@ -151,7 +151,7 @@ export default function Hero({ id }: { id?: string }) {
                             transition={{
                                 opacity: { delay: role.delay * 0.2, duration: 0.5 },
                                 scale: { delay: role.delay * 0.2, duration: 0.5 },
-                                y: { repeat: Infinity, duration: 2.5, ease: "easeInOut", delay: role.delay }
+                                y: { repeat: Infinity, duration: 1.8, ease: "easeInOut", delay: role.delay }
                             }}
                             className={`absolute px-3 py-1.5 rounded-full shadow-sm border backdrop-blur-sm text-[10px] md:text-xs font-bold whitespace-nowrap z-20 ${role.color}`}
                             style={{
