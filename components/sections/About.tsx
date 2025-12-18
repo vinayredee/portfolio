@@ -43,7 +43,7 @@ export default function About({ id }: { id?: string }) {
 
                             {/* View Resume Button - Simple underline style */}
                             <motion.a
-                                href="https://drive.google.com/file/d/YOUR_RESUME_LINK_HERE/view?usp=sharing"
+                                href={personalInfo.resumeUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 whileHover={{ x: 5 }}

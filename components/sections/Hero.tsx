@@ -78,7 +78,7 @@ export default function Hero({ id }: { id?: string }) {
                             <span className="block text-indigo-600 text-xs tracking-[0.3em] font-bold uppercase mb-1">
                                 I am
                             </span>
-                            <h1 className="text-xl md:text-2xl font-black text-orange-400 tracking-tight mb-2">
+                            <h1 className="text-lg sm:text-xl md:text-2xl font-black text-orange-400 tracking-tight mb-2">
                                 {personalInfo.name}
                             </h1>
                             <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-lg font-medium">

@@ -12,12 +12,12 @@ const profiles = [
         gradient: 'from-yellow-400 to-orange-500',
         bg: 'bg-yellow-50',
         stats: '400+ Problems Solved',
-        subStats: 'Top 15% Global Rank',
+        subStats: 'Consistent Solver',
         action: 'View Solutions'
     },
     {
         name: 'takeuforward',
-        url: 'https://takeuforward.org/profile/vinay_reddy',
+        url: 'https://takeuforward.org/profile/kunduvinaykumarreddy',
         icon: LineChart,
         color: 'text-rose-600',
         gradient: 'from-rose-500 to-red-600',

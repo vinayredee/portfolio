@@ -8,6 +8,7 @@ export const personalInfo = {
     location: "Anantapur, Andhra Pradesh, India",
     linkedin: "https://linkedin.com/in/kunduvinaykumarreddy",
     github: "https://github.com/vinayredee",
+    resumeUrl: "https://drive.google.com/file/d/1UkYwo3Lv-gSfGFqN0GHg6g5MkJWSqW1U/view?usp=sharing",
     bio: "Aspiring full-stack developer specializing in AI-powered applications and scalable web systems. Experienced in building real-world solutions using Java, React, and Spring Boot. Strong foundation in DSA, system design, and proven ability to ship production-grade projects.",
 
     skills: {
