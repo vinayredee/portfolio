@@ -41,7 +41,10 @@ export default function Projects({ id }: { id?: string }) {
     }, [selectedId]);
 
     return (
-        <section id={id} className="py-24 px-6 relative overflow-hidden">
+        <section
+            id={id}
+            className={`py-24 px-6 relative transition-all duration-300 ${selectedId ? 'z-[100]' : 'z-10'}`}
+        >
 
             {/* Added Colorful Blob Background */}
             <div className="absolute top-20 left-0 w-[500px] h-[500px] bg-purple-100/40 rounded-full blur-3xl pointer-events-none -ml-40"></div>
