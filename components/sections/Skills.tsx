@@ -60,7 +60,7 @@ const skillCategories = [
 
 export default function Skills({ id }: { id?: string }) {
     return (
-        <section id={id} className="py-16 md:py-24 px-6 relative overflow-hidden scroll-mt-20">
+        <section id={id} className="py-12 md:py-16 px-6 relative overflow-hidden scroll-mt-24">
 
             {/* Background Gradients */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-50/40 rounded-full blur-[100px] pointer-events-none -mr-20 -mt-20"></div>
@@ -74,7 +74,7 @@ export default function Skills({ id }: { id?: string }) {
                             <span className="w-6 h-[2px] bg-indigo-500 rounded-full"></span>
                             Expertise
                         </span>
-                        <h2 className="text-lg md:text-xl font-bold text-gray-900 tracking-tight mb-1">
+                        <h2 className="text-base md:text-lg font-bold text-gray-900 tracking-tight mb-0.5">
                             Technical <span className="text-indigo-600">Artillery</span>.
                         </h2>
                         <p className="text-gray-500 text-[10px] md:text-xs max-w-lg leading-relaxed">
@@ -92,7 +92,7 @@ export default function Skills({ id }: { id?: string }) {
                 </div>
 
                 {/* Central Connected Hub Layout - UNIFIED MOBILE & DESKTOP */}
-                <div className="relative w-full max-w-5xl mx-auto py-2 flex items-center justify-center">
+                <div className="relative w-full max-w-5xl mx-auto py-1 flex items-center justify-center">
 
                     {/* Connection Lines Layer (SVG) */}
                     <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-50 md:opacity-100">
@@ -105,10 +105,10 @@ export default function Skills({ id }: { id?: string }) {
 
                     {/* Central Hub Node - Visible on ALL Screens */}
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center justify-center">
-                        <div className="relative w-16 h-16 md:w-20 md:h-20 bg-white rounded-full shadow-xl border-4 border-white flex items-center justify-center z-20 ring-2 ring-indigo-50">
+                        <div className="relative w-12 h-12 md:w-16 md:h-16 bg-white rounded-full shadow-xl border-4 border-white flex items-center justify-center z-20 ring-2 ring-indigo-50">
                             <div className="text-center">
-                                <span className="block text-base md:text-lg mb-0.5">🚀</span>
-                                <span className="text-[6px] md:text-[7px] font-black uppercase tracking-widest text-indigo-900 block leading-tight">Core</span>
+                                <span className="block text-sm md:text-base mb-0.5">🚀</span>
+                                <span className="text-[5px] md:text-[6px] font-black uppercase tracking-widest text-indigo-900 block leading-tight">Core</span>
                             </div>
                             {/* Orbiting Particles Section - Enhanced Motion */}
                             <div className="absolute inset-0 rounded-full border border-indigo-100 animate-[spin_4s_linear_infinite]">
@@ -119,7 +119,7 @@ export default function Skills({ id }: { id?: string }) {
                     </div>
 
                     {/* 2x2 Grid - Consistently Applied */}
-                    <div className="grid grid-cols-2 gap-x-3 gap-y-3 md:gap-x-16 md:gap-y-6 w-full relative z-10 px-2 md:px-0">
+                    <div className="grid grid-cols-2 gap-x-2 gap-y-2 md:gap-x-12 md:gap-y-4 w-full relative z-10 px-2 md:px-0">
                         {skillCategories.map((cat, idx) => (
                             <motion.div
                                 key={cat.title}
@@ -131,7 +131,7 @@ export default function Skills({ id }: { id?: string }) {
                             >
                                 <motion.div
                                     whileHover={{ y: -2 }}
-                                    className="relative w-full max-w-[360px] bg-white rounded-xl p-3 md:p-4 shadow-md shadow-indigo-100/50 border border-white overflow-hidden group hover:shadow-xl transition-all duration-300"
+                                    className="relative w-full max-w-[340px] bg-white rounded-xl p-2.5 md:p-3 shadow-md shadow-indigo-100/50 border border-white overflow-hidden group hover:shadow-xl transition-all duration-300"
                                 >
                                     {/* Watermark */}
                                     <div className={`absolute -right-6 -bottom-6 ${cat.color} opacity-[0.08] group-hover:opacity-[0.12] transition-opacity rotate-12`}>
@@ -139,9 +139,9 @@ export default function Skills({ id }: { id?: string }) {
                                     </div>
 
                                     {/* Header Row */}
-                                    <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3 border-b border-gray-50 pb-2">
-                                        <div className={`w-6 h-6 md:w-8 md:h-8 ${cat.bg} ${cat.color} rounded-lg flex items-center justify-center shadow-sm`}>
-                                            <cat.icon size={12} className="md:w-4 md:h-4" />
+                                    <div className="flex items-center gap-1.5 md:gap-2 mb-1.5 md:mb-2 border-b border-gray-50 pb-1.5">
+                                        <div className={`w-5 h-5 md:w-7 md:h-7 ${cat.bg} ${cat.color} rounded-lg flex items-center justify-center shadow-sm`}>
+                                            <cat.icon size={10} className="md:w-3.5 md:h-3.5" />
                                         </div>
                                         <div>
                                             <h3 className="text-[9px] md:text-[11px] font-bold uppercase tracking-wider text-gray-800">{cat.title}</h3>
