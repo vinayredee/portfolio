@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '@/lib/data';
 import GlassCard from '@/components/ui/GlassCard';
@@ -27,6 +27,18 @@ const projectVisuals: Record<string, { icon: any, gradient: string, color: strin
 export default function Projects({ id }: { id?: string }) {
     const [selectedId, setSelectedId] = useState<string | null>(null);
     const selectedProject = projects.find(p => p.id === selectedId);
+
+    // Prevent body scroll when modal is open
+    useEffect(() => {
+        if (selectedId) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [selectedId]);
 
     return (
         <section id={id} className="py-24 px-6 relative overflow-hidden">
@@ -111,7 +123,7 @@ export default function Projects({ id }: { id?: string }) {
                 {/* Modal */}
                 <AnimatePresence>
                     {selectedId && selectedProject && (
-                        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
+                        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
